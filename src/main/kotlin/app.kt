@@ -2,7 +2,6 @@
 import com.entities.*
 import mongo.*
 import mongo.entityReposotories.*
-import org.bson.types.ObjectId
 
 object MongoBundle
     {
@@ -12,17 +11,17 @@ object MongoBundle
 
     object Factory {
 
-        val dictionaryBaseRepository = DictionaryBaseMongoRepository(MongoBundle.current)
+        val categoryRepository = CategoryMongoRepository(MongoBundle.current)
     }
 
 
     fun main() {
 
-        val entiti2 = DictionaryBase("test")
+        val entity2 = Category("test", "test")
 
         try
         {
-            println (Factory.dictionaryBaseRepository.add(entiti2) )
+            println (Factory.categoryRepository.add(entity2) )
         }
 
         catch (e: Exception) {

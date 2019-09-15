@@ -5,9 +5,9 @@ interface Repository<T>
 
     fun getAll() : List<T>
 
-    fun getById (id : String) : T
+    fun getById (id : String) : T?
 
-    fun add (item : T) : String
+    fun add (item : T)
 
     fun update (item : T) : Boolean
 

@@ -1,9 +1,10 @@
 package mongo
 
-import com.entities.DictionaryBase
+import com.entities.*
+import com.interfaces.*
 
 class MongoRepositoriesBundle {
 
-    val dictionaryBaseRepository =
-        MongoRepository<DictionaryBase>("DictionaryBase", DictionaryBase::class.java)
+    val categoryMongoRepository =
+        MongoRepository<Category>("Category", Category::class.java)
 }
